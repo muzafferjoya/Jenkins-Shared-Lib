@@ -1,8 +1,7 @@
 // File: vars/publishDependencyCheckReport.groovy
 
 def call(String reportFileName) {
-    post {
-        always {
+        
             // Archive the Dependency-Check HTML report as an artifact
             archiveArtifacts artifacts: "reports/${reportFileName}", allowEmptyArchive: true
 
@@ -17,5 +16,3 @@ def call(String reportFileName) {
                 reportTitles: 'Dependency-Check Report'
             ])
         }
-    }
-}
