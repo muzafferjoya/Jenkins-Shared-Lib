@@ -1,6 +1,6 @@
 def call(String project, String ImageTag, String hubUser){
     sh """
-    trivy --no-progress image --format template --template "@/usr/local/share/trivy/templates/html.tpl" -o report.html --severity HIGH,CRITICAL ${hubUser}/${project}:latest
+    trivy image --format template --template "@/usr/local/share/trivy/templates/html.tpl" -o report.html --severity HIGH,CRITICAL ${hubUser}/${project}:latest
     """
 
 }
