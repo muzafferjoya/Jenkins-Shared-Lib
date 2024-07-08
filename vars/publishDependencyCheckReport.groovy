@@ -15,4 +15,4 @@ def call(String reportFileName) {
                 reportName: 'Dependency-Check Report',
                 reportTitles: 'Dependency-Check Report'
             ])
-        }
+}
